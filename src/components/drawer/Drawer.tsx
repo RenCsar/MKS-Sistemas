@@ -1,7 +1,7 @@
 import { Box, Typography, Drawer, Button, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { useState } from 'react';
 import { Anchor } from '../../utils/types';
-import { BoxHA, Btn } from './Drawer.Styled';
+import { BoxHA } from './Drawer.Styled';
 import Car from '../../assets/car.png'
 
 export const DrawerAside = () => {
@@ -81,12 +81,12 @@ export const DrawerAside = () => {
             {(['right'] as const).map((anchor) => (
                 <Box key={anchor}
                 >
-                    <Btn onClick={toggleDrawer(anchor, true)} className={'btn'}>
+                    <Button onClick={toggleDrawer(anchor, true)} className={'btn'}>
                         <img src={Car} />
                         <Typography component={'p'}>
                             0
                         </Typography>
-                    </Btn>
+                    </Button>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}

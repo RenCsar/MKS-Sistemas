@@ -36,14 +36,3 @@ export const BoxHA = styled(Box)`
         }
     }
 `
-
-export const Btn = styled(Button)`
-
-    .btn {background-color: var(--branco);
-    width: 90px;
-    height: 45px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;}
-
-`
