@@ -1,7 +1,7 @@
 import { BoxSC } from "./Header.Styled"
 import { Box, Typography, Button } from '@mui/material'
 import Logo from '../../assets/MKS.png'
-import Car from '../../assets/car.png'
+import { DrawerAside } from "../drawer/Drawer"
 
 export const Header = () => {
     return (
@@ -12,13 +12,8 @@ export const Header = () => {
                     Sistemas
                 </Typography>
             </Box>
-            <Box className='btn-container'>
-                <Button className="btn">
-                    <img src={Car} />
-                    <Typography component={'p'}>
-                        0
-                    </Typography>
-                </Button>
+            <Box className='btn-container'>               
+                <DrawerAside />
             </Box>
         </BoxSC>
     )
