@@ -11,6 +11,10 @@ export const BoxSC = styled(Box)`
     flex-direction: column;
     justify-content: space-between; // Provisório em quando não defino os tamanhos dos componentes internos
     
+    .foto {
+        width: 110px;
+    }
+
     .comprar-container {
         background-color: var(--azul);
         display: flex;

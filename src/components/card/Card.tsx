@@ -6,7 +6,7 @@ export const Card = (props: any) => {
   return (
     <BoxSC>
       <Box>
-        IMG
+        <img src={props.img} alt="foto do produto" className={'foto'} />
       </Box>
       <Box>
         {props.nome}
