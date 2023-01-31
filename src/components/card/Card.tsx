@@ -1,21 +1,22 @@
 import { Box, Typography } from '@mui/material'
 import { BoxSC } from './Card.Styled'
 import Compra from '../../assets/shopping-bag.svg'
+import { TProdutos } from '../../utils/types'
 
-export const Card = (props: any) => {
+export const Card = (produto: TProdutos) => {
   return (
     <BoxSC>
       <Box>
-        <img src={props.img} alt="foto do produto" className={'foto'} />
+        <img src={produto.photo} alt="foto do produto" className={'foto'} />
       </Box>
       <Box>
-        {props.nome}
+        {produto.name}
       </Box>
       <Box>
-        {props.preco}
+        {produto.price}
       </Box>
       <Box>
-        {props.descricao}
+        {produto.description}
       </Box>
       <Box className='comprar-container'>
         <img src={Compra} alt="icone-compras" />

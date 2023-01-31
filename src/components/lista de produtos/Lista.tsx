@@ -18,9 +18,7 @@ export const Lista = () => {
             {produtos.map((el: any, index: number) =>
                 <Card
                     key={`${el.name}-${index}`}
-                    nome={el.name} preco={el.price}
-                    descricao={el.description}
-                    img={el.photo}
+                    {...el}
                 />
             )}
         </BoxSC>
