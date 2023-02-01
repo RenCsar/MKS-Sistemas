@@ -42,4 +42,10 @@ export const BoxSC = styled(Box)`
         }
     }
 
+    @media (max-width: 400px) {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 120px;
+    }
+
 `
