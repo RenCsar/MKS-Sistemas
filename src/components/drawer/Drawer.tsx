@@ -59,11 +59,11 @@ export const DrawerAside = () => {
                     </Box>
                 </BoxHA>
                 <Box
-                sx={{
-                    height: '70vh',
-                    overflowY: 'auto'
-                }}
-                >                    
+                    sx={{
+                        height: '70vh',
+                        overflowY: 'auto'
+                    }}
+                >
                     <List>
                         {produto.map((el: any) => (
                             <ListItem key={el.id} disablePadding>
@@ -76,7 +76,7 @@ export const DrawerAside = () => {
                         ))}
                     </List>
                 </Box>
-                <Box>                    
+                <Box>
                     <Box
                         sx={{
                             display: 'flex',
@@ -84,7 +84,7 @@ export const DrawerAside = () => {
                             width: '100%',
                             cursor: 'pointer',
                             color: 'var(--branco)',
-                            padding: '0px, 20px',                            
+                            padding: '0px, 20px',
                         }}
                     >
                         <Typography
