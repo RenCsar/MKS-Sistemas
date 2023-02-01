@@ -23,6 +23,8 @@ export const BoxSC = styled(Box)`
         gap: 14px;
         border-bottom-right-radius: 8px;
         border-bottom-left-radius: 8px;
+        cursor: pointer;
+        user-select: none;
 
         & h6 {
             color: var(--branco);

@@ -34,6 +34,8 @@ export const carrinhoSlice = createSlice({
                 }
             }
         },
-        resetarCarrinho: () => initialState,
+        limparCarrinho: () => initialState,
     }
 })
+
+export const { addProduto, addCount, removeCount, limparCarrinho } = carrinhoSlice.actions;

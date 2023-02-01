@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 
 export const BoxHA = styled(Box)`
     display: flex;

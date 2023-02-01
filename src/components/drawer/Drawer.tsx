@@ -3,8 +3,13 @@ import { useState } from 'react';
 import { Anchor } from '../../utils/types';
 import { BoxHA } from './Drawer.Styled';
 import Car from '../../assets/car.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { limparCarrinho } from '../../store/reducers/carrinhoSlice';
 
 export const DrawerAside = () => {
+
+    const produto = useSelector((state: any) => state.carrinho);
+    const dispatch = useDispatch();
 
     const [state, setState] = useState({
         right: false,
@@ -35,8 +40,11 @@ export const DrawerAside = () => {
             <Box
                 sx={{
                     background: 'var(--azul)',
-                    height: '100vh',
-                    width: '400px'
+                    minHeight: '100vh',
+                    width: '400px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
                 }}
             >
                 <BoxHA>
@@ -50,28 +58,61 @@ export const DrawerAside = () => {
                         X
                     </Box>
                 </BoxHA>
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                </ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                </ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
+                <Box
+                sx={{
+                    height: '70vh',
+                    overflowY: 'auto'
+                }}
+                >                    
+                    <List>
+                        {produto.map((el: any) => (
+                            <ListItem key={el.id} disablePadding>
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                    </ListItemIcon>
+                                    <ListItemText primary={el.description} />
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+                <Box>                    
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'flex-end',
+                            width: '100%',
+                            cursor: 'pointer',
+                            color: 'var(--branco)',
+                            padding: '0px, 20px',                            
+                        }}
+                    >
+                        <Typography
+                            variant='subtitle1'
+                            onClick={() => { dispatch(limparCarrinho()) }}
+                            sx={{
+                                textDecoration: 'underline',
+                            }}
+                        >
+                            {`Limpar carrinho (${produto.length})`}
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            background: '#000000',
+                            width: '100%',
+                            height: '75px',
+                            color: 'var(--branco)',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            fontSize: '20px',
+                            fontWeight: '700'
+                        }}
+                    >
+                        Finalizar Compra
+                    </Box>
+                </Box>
             </Box>
         </Box>
     );
@@ -84,7 +125,7 @@ export const DrawerAside = () => {
                     <Button onClick={toggleDrawer(anchor, true)} className={'btn'}>
                         <img src={Car} />
                         <Typography component={'p'}>
-                            0
+                            {produto.length}
                         </Typography>
                     </Button>
                     <Drawer
