@@ -14,7 +14,7 @@ export const Card = (produto: TProdutos) => {
       <Box className='img-container'>
         <img src={produto.photo} alt="foto do produto" className={'foto'} />
       </Box>
-      <Box className='title-container'>        
+      <Box className='title-container'>
         <Box className='name-container'>
           {produto.name}
         </Box>
@@ -25,9 +25,9 @@ export const Card = (produto: TProdutos) => {
       <Box className='description-container'>
         {produto.description}
       </Box>
-      <Box 
-      className='comprar-container'
-      onClick={()=> {dispatch(addProduto(produto))}}
+      <Box
+        className='comprar-container'
+        onClick={() => { dispatch(addProduto(produto)) }}
       >
         <img src={Compra} alt="icone-compras" />
         <Typography variant='h6'>
