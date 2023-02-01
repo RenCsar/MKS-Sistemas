@@ -1,5 +1,5 @@
 import { BoxSC } from "./Header.Styled"
-import { Box, Typography, Button } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Logo from '../../assets/MKS.png'
 import { DrawerAside } from "../drawer/Drawer"
 
@@ -12,7 +12,7 @@ export const Header = () => {
                     Sistemas
                 </Typography>
             </Box>
-            <Box className='btn-container'>               
+            <Box className='btn-container'>
                 <DrawerAside />
             </Box>
         </BoxSC>

@@ -1,14 +1,18 @@
 import styled from "styled-components";
 import { Box } from '@mui/material'
 
-export const BoxSC = styled(Box)`
-    background-color: var(--azul);
-    height: 101px;
-    width: 100%;
+const base = `
     display: flex;
-    align-items: center;
     justify-content: space-between;
+`
+
+export const BoxSC = styled(Box)`
+    ${base};
+    align-items: center;
+    width: 100%;
+    height: 101px;
     padding: 0 60px;
+    background-color: var(--azul);
 
     .img-container {
         display: flex;
@@ -23,12 +27,11 @@ export const BoxSC = styled(Box)`
     .btn-container {
 
         .btn {
+            ${base};
             background-color: var(--branco);
             width: 90px;
             height: 45px;
             border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
             padding: 20px;
         }
         

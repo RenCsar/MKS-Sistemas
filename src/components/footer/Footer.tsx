@@ -1,18 +1,9 @@
-import { Box } from "@mui/material"
+import { BoxSC } from "./Footer.Styled"
 
 export const Footer = () => {
   return (
-    <Box
-    sx={{
-        width: '100%',
-        background: '#EEEEEE',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '34px'
-    }}
-    >
+    <BoxSC>
       MKS sistemas © Todos os direitos reservados
-    </Box>
+    </BoxSC>
   )
 }
