@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux/es/exports"
 import { getProdutos } from "../../store/reducers/produtosSlice"
 import { Card } from "../card/Card"
+import { CardSkeleton } from "../cardSkeleton/CardSkeleton"
 import { BoxSC, BoxSK } from "./Lista.Styled"
 
 export const Lista = () => {
@@ -15,17 +16,14 @@ export const Lista = () => {
     const loading = useSelector((state: any) => state.produtos.status);  
     const dispatch = useDispatch<any>()
 
+    const skeletonOn = [1, 2, 3, 4, 5, 6, 7, 8]
+
     return (
         <BoxSC>
             { loading == 'loading' ?
                 <BoxSK className='skeleton-container'>
-                    {produtos.map((p: any, index: number) =>
-                        <Skeleton
-                            variant="rounded"
-                            width={217}
-                            height={285}
-                            key={index}
-                        />
+                    {skeletonOn.map((p: any, index: number) =>
+                        <CardSkeleton />
                     )}
                 </BoxSK>
                 : produtos.map((el: any, index: number) =>
