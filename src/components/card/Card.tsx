@@ -11,16 +11,18 @@ export const Card = (produto: TProdutos) => {
 
   return (
     <BoxSC>
-      <Box>
+      <Box className='img-container'>
         <img src={produto.photo} alt="foto do produto" className={'foto'} />
       </Box>
-      <Box>
-        {produto.name}
+      <Box className='title-container'>        
+        <Box className='name-container'>
+          {produto.name}
+        </Box>
+        <Box className='preco-container'>
+          {`R$${Math.round(produto.price)}`}
+        </Box>
       </Box>
-      <Box>
-        {produto.price}
-      </Box>
-      <Box>
+      <Box className='description-container'>
         {produto.description}
       </Box>
       <Box 
