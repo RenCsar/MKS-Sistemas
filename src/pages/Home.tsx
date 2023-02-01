@@ -9,14 +9,7 @@ export const Home = () => {
     return (
         <BoxSC>
             <Header />
-            <Box sx={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-
-            }}>
+            <Box className='lista-container'>
                 <Lista />
             </Box>
             <Footer />
