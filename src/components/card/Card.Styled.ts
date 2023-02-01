@@ -9,7 +9,7 @@ export const BoxSC = styled(Box)`
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,.5);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; // Provisório em quando não defino os tamanhos dos componentes internos    
+    justify-content: space-between;  
 
     .img-container{
         display: flex;
