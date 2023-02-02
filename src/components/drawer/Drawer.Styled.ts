@@ -4,7 +4,8 @@ import { Box } from '@mui/material';
 const base = `
     display: flex;
     align-items: center;
-    color: var(--branco)
+    justify-content: center;
+    color: var(--branco);
 `
 
 export const BoxHA = styled(Box)`
@@ -19,7 +20,6 @@ export const BoxHA = styled(Box)`
     
     & .btn-close {
         ${base};
-        justify-content: center;
         background-color: black;
         border-radius: 50%;
         height: 38px;
@@ -37,4 +37,15 @@ export const BoxHA = styled(Box)`
             transform: scale(0.98);
         }
     }
+`
+
+export const BoxItem = styled(Box)`
+    ${base}
+    justify-content: start;
+    flex-direction: column;
+    gap:20px;
+    width: 100%;
+    color: var(--preto);
+    overflow-y: auto;  
+    padding: 20px;
 `

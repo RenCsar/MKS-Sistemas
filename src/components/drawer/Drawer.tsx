@@ -1,10 +1,11 @@
 import { Box, Typography, Drawer, Button, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import { useState } from 'react';
 import { Anchor } from '../../utils/types';
-import { BoxHA } from './Drawer.Styled';
+import { BoxHA, BoxItem } from './Drawer.Styled';
 import Car from '../../assets/car.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { limparCarrinho } from '../../store/reducers/carrinhoSlice';
+import CardCarrinho from '../cardCarrinho/CardCarrinho';
 
 export const DrawerAside = () => {
 
@@ -64,17 +65,11 @@ export const DrawerAside = () => {
                         overflowY: 'auto'
                     }}
                 >
-                    <List>
-                        {produto.map((el: any) => (
-                            <ListItem key={el.id} disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                    </ListItemIcon>
-                                    <ListItemText primary={el.description} />
-                                </ListItemButton>
-                            </ListItem>
+                    <BoxItem>
+                        {produto.map((el: any, index: number) => (
+                            <CardCarrinho key={`${el.name}-${index}`} {...el} />
                         ))}
-                    </List>
+                    </BoxItem>
                 </Box>
                 <Box>
                     <Box

@@ -16,7 +16,7 @@ export const Lista = () => {
     const loading = useSelector((state: any) => state.produtos.status);  
     const dispatch = useDispatch<any>()
 
-    const skeletonOn = [1, 2, 3, 4, 5, 6, 7, 8]
+    const skeletonOn = [1, 2, 3, 4, 5, 6, 7, 8] 
 
     return (
         <BoxSC>
