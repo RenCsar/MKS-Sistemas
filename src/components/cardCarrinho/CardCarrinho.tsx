@@ -14,6 +14,7 @@ const CardCarrinho = (produto: TProdutos) => {
       </Box>
       <Box>
         {/* <VariantButtonGroup /> */}
+        <small>Qtd:</small>
         <Box sx={{
           border: '1px solid #BFBFBF',
           borderRadius: '4px',
@@ -22,21 +23,26 @@ const CardCarrinho = (produto: TProdutos) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-        }}>
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px'}}>-</Box>
+          fontSize: '10px'
+        }}>          
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}}>-</Box>
           <Box sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            borderRight: '1px solid black',
-            borderLeft: '1px solid black',
+            borderRight: '1px solid #BFBFBF',
+            borderLeft: '1px solid #BFBFBF',
             padding: '0 2px',
             height: '15px',
-
           }}>0</Box>
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px'}}>+</Box>
-
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}}>+</Box>
         </Box>
+      </Box>
+      <Box className='price-container'>
+        <p>{`R$${Math.round(produto.price)}`}</p>
+      </Box>
+      <Box className="btn-close">
+        x
       </Box>
     </BoxSC>
   )

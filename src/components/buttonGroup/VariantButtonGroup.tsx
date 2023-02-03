@@ -25,11 +25,14 @@ export default function VariantButtonGroup() {
           justifyContent: 'center',
           alignItems: 'center',
           border: '1px solid black',
-          padding: '5px'
+          padding: '5px',
+          width: '20px', 
+          height: '20px',
+          p: 0
         }}>
           0
         </Box>
-        <Button sx={{color: 'black', border: '1px solid black',}}>+</Button>
+        <Button sx={{color: 'black', border: '1px solid black', width: '20px', height: '20px'}}>+</Button>
       </ButtonGroup>
     </Box>
   );
