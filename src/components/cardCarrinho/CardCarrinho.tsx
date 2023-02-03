@@ -1,9 +1,15 @@
 import { Box, Button } from '@mui/material'
+import { useDispatch, useSelector } from 'react-redux'
+import { addCount, removeCount, removeProduto } from '../../store/reducers/carrinhoSlice'
 import { TProdutos } from '../../utils/types'
 import VariantButtonGroup from '../buttonGroup/VariantButtonGroup'
 import { BoxSC } from './CardCarrinho.Styled'
 
 const CardCarrinho = (produto: TProdutos) => {
+
+  const carrinho = useSelector((state: any)=> state.carrinho)
+  const dispatch = useDispatch()
+
   return (
     <BoxSC>
       <Box className='img-container'>
@@ -25,7 +31,7 @@ const CardCarrinho = (produto: TProdutos) => {
           alignItems: 'center',
           fontSize: '10px'
         }}>          
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}}>-</Box>
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}} onClick={()=> dispatch(removeCount(produto))}>-</Box>
           <Box sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -34,14 +40,14 @@ const CardCarrinho = (produto: TProdutos) => {
             borderLeft: '1px solid #BFBFBF',
             padding: '0 2px',
             height: '15px',
-          }}>0</Box>
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}}>+</Box>
+          }}>{produto.count}</Box>
+          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}} onClick={()=> dispatch(addCount(produto))}>+</Box>
         </Box>
       </Box>
       <Box className='price-container'>
         <p>{`R$${Math.round(produto.price)}`}</p>
       </Box>
-      <Box className="btn-close">
+      <Box className="btn-close" onClick={()=> dispatch(removeProduto(produto))}>
         x
       </Box>
     </BoxSC>

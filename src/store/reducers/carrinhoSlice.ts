@@ -19,23 +19,26 @@ export const carrinhoSlice = createSlice({
             }
         },
         addCount: (state, { payload }) => {
-            const contador = state.find((produto: any) => produto.id === payload.id);
-            if (contador) {
-                contador.count++;
+            const carrinho = state.find((produto: any) => produto.id === payload.id);
+            if (carrinho) {
+                carrinho.count++;
             }
         },
         removeCount: (state, { payload }) => {
-            const contador = state.find((produto: any) => produto.id === payload.id);
-            if (contador) {
-                if (contador.count <= 0) {
+            const carrinho = state.find((produto: any) => produto.id === payload.id);
+            if (carrinho) {
+                if (carrinho.count <= 1) {
                     return state.filter((produto: any) => produto.id !== payload.id);
                 } else {
-                    contador.count--;
+                    carrinho.count--;
                 }
             }
+        },
+        removeProduto: (state, { payload }) => {
+            return state.filter((produto: any) => produto.id !== payload.id);
         },
         limparCarrinho: () => initialState,
     }
 })
 
-export const { addProduto, addCount, removeCount, limparCarrinho } = carrinhoSlice.actions;
+export const { addProduto, removeProduto, addCount, removeCount, limparCarrinho } = carrinhoSlice.actions;

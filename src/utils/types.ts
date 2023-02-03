@@ -9,4 +9,5 @@ export type TProdutos = {
     price: number;
     createdAt: string;
     updatedAt: string;
+    count: number
 }
