@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { Box } from "@mui/material";
 
-export const BoxSC = styled(Box)`
+const flexCenter = `
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: center; 
+`
+
+export const BoxSC = styled(Box)`
+    ${flexCenter}
     justify-content: space-between;
     background-color: var(--branco);
     width: 300px;
@@ -14,9 +19,7 @@ export const BoxSC = styled(Box)`
     gap: 10px;
 
     & .img-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        ${flexCenter};
 
         img {
             width: 60px;
@@ -35,12 +38,11 @@ export const BoxSC = styled(Box)`
 
     & .price-container {
         font-weight: 700;
+        user-select: none;
     }
 
     & .btn-close{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        ${flexCenter}
         color: white;
         background-color: black;
         border-radius: 50%;
@@ -53,6 +55,7 @@ export const BoxSC = styled(Box)`
         position: absolute;
         top: -8px;
         right: -8px;
+        user-select: none;
 
         &:hover {
             transform: scale(1.05);

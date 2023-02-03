@@ -1,13 +1,12 @@
-import { Box, Button } from '@mui/material'
-import { useDispatch, useSelector } from 'react-redux'
-import { addCount, removeCount, removeProduto } from '../../store/reducers/carrinhoSlice'
+import { Box } from '@mui/material'
+import { useDispatch } from 'react-redux'
+import { removeProduto } from '../../store/reducers/carrinhoSlice'
 import { TProdutos } from '../../utils/types'
-import VariantButtonGroup from '../buttonGroup/VariantButtonGroup'
+import ButtonGroup from '../buttonGroup/ButtonGroup'
 import { BoxSC } from './CardCarrinho.Styled'
 
 const CardCarrinho = (produto: TProdutos) => {
 
-  const carrinho = useSelector((state: any)=> state.carrinho)
   const dispatch = useDispatch()
 
   return (
@@ -18,36 +17,11 @@ const CardCarrinho = (produto: TProdutos) => {
       <Box className='name-container'>
         {produto.name}
       </Box>
-      <Box>
-        {/* <VariantButtonGroup /> */}
-        <small>Qtd:</small>
-        <Box sx={{
-          border: '1px solid #BFBFBF',
-          borderRadius: '4px',
-          width: '50px',
-          height: '20px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: '10px'
-        }}>          
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}} onClick={()=> dispatch(removeCount(produto))}>-</Box>
-          <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRight: '1px solid #BFBFBF',
-            borderLeft: '1px solid #BFBFBF',
-            padding: '0 2px',
-            height: '15px',
-          }}>{produto.count}</Box>
-          <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '15px', cursor: 'pointer', userSelect: 'none'}} onClick={()=> dispatch(addCount(produto))}>+</Box>
-        </Box>
-      </Box>
+      <ButtonGroup {...produto} />
       <Box className='price-container'>
-        <p>{`R$${Math.round(produto.price)}`}</p>
+        <p>{`R$${Math.round(produto.price) * produto.count}`}</p>
       </Box>
-      <Box className="btn-close" onClick={()=> dispatch(removeProduto(produto))}>
+      <Box className="btn-close" onClick={() => dispatch(removeProduto(produto))}>
         x
       </Box>
     </BoxSC>
