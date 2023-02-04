@@ -11,7 +11,7 @@ export const BoxSC = styled(Box)`
     ${flexCenter}
     justify-content: space-between;
     background-color: var(--branco);
-    width: 300px;
+    width: 380px;
     height: 95px;
     border-radius: 8px;
     position: relative;

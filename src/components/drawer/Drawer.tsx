@@ -12,6 +12,9 @@ export const DrawerAside = () => {
     const produto = useSelector((state: any) => state.carrinho);
     const dispatch = useDispatch();
 
+    const values = produto.map((el: any) => el.price * el.count)
+    const subtotal = values.length > 0 ? values.reduce((soma: number, i: number) => soma + i) : 0
+
     const [state, setState] = useState({
         right: false,
     });
@@ -42,7 +45,7 @@ export const DrawerAside = () => {
                 sx={{
                     background: 'var(--azul)',
                     minHeight: '100vh',
-                    width: '400px',
+                    width: '450px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between'
@@ -61,7 +64,7 @@ export const DrawerAside = () => {
                 </BoxHA>
                 <Box
                     sx={{
-                        height: '70vh',
+                        height: '65vh',
                         overflowY: 'auto'
                     }}
                 >
@@ -79,7 +82,7 @@ export const DrawerAside = () => {
                             width: '100%',
                             cursor: 'pointer',
                             color: 'var(--branco)',
-                            padding: '0px, 20px',
+                            padding: '0px 5px',
                         }}
                     >
                         <Typography
@@ -91,6 +94,27 @@ export const DrawerAside = () => {
                         >
                             {`Limpar carrinho (${produto.length})`}
                         </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            padding: '0px 20px',
+                            color: 'var(--branco)',
+                            fontSize: '28px',
+                            fontWeight: '700',
+                            height: '50px',
+                        }}
+                    >
+                        <Box>
+                            Total:
+                        </Box>
+                        <Box>
+                            {`R$ ${subtotal.toLocaleString("pt-br", {
+                                currency: "BRL",
+                            })}`}
+                        </Box>
                     </Box>
                     <Box
                         sx={{

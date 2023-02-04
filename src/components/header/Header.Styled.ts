@@ -10,7 +10,7 @@ export const BoxSC = styled(Box)`
     ${base};
     align-items: center;
     width: 100%;
-    height: 101px;
+    height: 60px;
     padding: 0 60px;
     background-color: var(--azul);
 

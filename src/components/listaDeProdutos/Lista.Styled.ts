@@ -11,5 +11,5 @@ export const BoxSK = styled(Box)`
 `
 
 export const BoxSC = styled(BoxSK)`
-    margin: 50px 100px;
+    margin: 15px 100px;
 `

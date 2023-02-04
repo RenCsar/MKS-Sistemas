@@ -19,7 +19,9 @@ export const Card = (produto: TProdutos) => {
           {produto.name}
         </Box>
         <Box className='preco-container'>
-          {`R$${Math.round(produto.price)}`}
+          {`R$${Math.round(produto.price).toLocaleString("pt-br", {
+            currency: "BRL",
+          })}`}
         </Box>
       </Box>
       <Box className='description-container'>

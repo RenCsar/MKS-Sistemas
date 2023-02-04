@@ -10,7 +10,7 @@ const base = `
 export const BoxSC = styled(Box)`
     ${base};
     width: 100%;
-    background-color: var(--bg-cinza);
+    background-color: var(--branco);
 
     & .lista-container {
         ${base};

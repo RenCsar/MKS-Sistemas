@@ -12,7 +12,7 @@ export const BoxSC = styled(Box)`
     justify-content: space-between;  
     flex-direction: column;
     width: 217px;
-    height: 285px;
+    height: 275px;
     border-radius: 8px;
     background-color: var(--branco);
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,.5);
