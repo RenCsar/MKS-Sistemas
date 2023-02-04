@@ -1,4 +1,4 @@
-import { Box, Typography, Drawer, Button } from '@mui/material'
+import { Box, Typography, Drawer, Button, useTheme, useMediaQuery } from '@mui/material'
 import { useState } from 'react';
 import { Anchor } from '../../utils/types';
 import { BoxHA, BoxItem } from './Drawer.Styled';
@@ -18,6 +18,9 @@ export const DrawerAside = () => {
     const [state, setState] = useState({
         right: false,
     });
+
+    const theme = useTheme()
+    const smDown = useMediaQuery(theme.breakpoints.down('sm'))
 
     const toggleDrawer =
         (anchor: Anchor, open: boolean) =>
@@ -45,7 +48,7 @@ export const DrawerAside = () => {
                 sx={{
                     background: 'var(--azul)',
                     minHeight: '100vh',
-                    width: '450px',
+                    width: smDown? '100vw' : '450px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between'
@@ -82,15 +85,12 @@ export const DrawerAside = () => {
                             width: '100%',
                             cursor: 'pointer',
                             color: 'var(--branco)',
-                            padding: '0px 5px',
+                            padding: '0px 20px',
                         }}
                     >
                         <Typography
                             variant='subtitle1'
-                            onClick={() => { dispatch(limparCarrinho()) }}
-                            sx={{
-                                textDecoration: 'underline',
-                            }}
+                            onClick={() => dispatch(limparCarrinho())}                           
                         >
                             {`Limpar carrinho (${produto.length})`}
                         </Typography>

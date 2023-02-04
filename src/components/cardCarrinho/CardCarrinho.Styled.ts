@@ -20,10 +20,11 @@ export const BoxSC = styled(Box)`
 
     & .img-container {
         ${flexCenter};
+        user-select: none;
 
         img {
             width: 60px;
-        }
+        };
     };
 
     & .name-container{
@@ -39,6 +40,7 @@ export const BoxSC = styled(Box)`
     & .price-container {
         font-weight: 700;
         user-select: none;
+        width: 100px;
     }
 
     & .btn-close{
@@ -59,10 +61,14 @@ export const BoxSC = styled(Box)`
 
         &:hover {
             transform: scale(1.05);
-        }
+        };
 
         &:active {
             transform: scale(0.98);
-        }
-    }
+        };
+    };
+
+    @media (max-width: 449px){
+        width: 95%;
+    };
 `

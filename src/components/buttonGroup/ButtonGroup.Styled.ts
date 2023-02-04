@@ -28,7 +28,7 @@ export const BoxSC = styled(Box)`
         ${flexCenter}
         border-right: 1px solid #BFBFBF;
         border-left: 1px solid #BFBFBF;
-        padding: 0 2px;
+        padding: 0 5px;
         height: 15px;
         user-select: none;
     }
