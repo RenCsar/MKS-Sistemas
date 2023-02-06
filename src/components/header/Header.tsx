@@ -8,7 +8,7 @@ export const Header = () => {
         <BoxSC>
             <Box className='img-container'>
                 <img src={Logo} />
-                <Typography>
+                <Typography data-testid="marca">
                     Sistemas
                 </Typography>
             </Box>
