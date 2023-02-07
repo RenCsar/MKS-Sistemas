@@ -11,3 +11,14 @@ export type TProdutos = {
     updatedAt: string;
     count: number
 }
+
+export type TStore = {
+    produtos: any;
+    carrinho: any
+}
+
+export type TProdutosState = {
+    data: never[] | TProdutos[];
+    status: string;
+    error: string | undefined;
+}

@@ -1,6 +1,6 @@
 import { Box, Typography, Drawer, Button, useTheme, useMediaQuery } from '@mui/material'
 import { useState } from 'react';
-import { Anchor } from '../../utils/types';
+import { Anchor, TProdutos, TStore } from '../../utils/types';
 import { BoxHA, BoxItem } from './Drawer.Styled';
 import Car from '../../assets/car.png'
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,10 +9,10 @@ import CardCarrinho from '../cardCarrinho/CardCarrinho';
 
 export const DrawerAside = () => {
 
-    const produto = useSelector((state: any) => state.carrinho);
+    const produto = useSelector((state: TStore) => state.carrinho);
     const dispatch = useDispatch();
 
-    const values = produto.map((el: any) => el.price * el.count)
+    const values = produto.map((el: TProdutos) => el.price * el.count)
     const subtotal = values.length > 0 ? values.reduce((soma: number, i: number) => soma + i) : 0
 
     const [state, setState] = useState({
@@ -72,7 +72,7 @@ export const DrawerAside = () => {
                     }}
                 >
                     <BoxItem>
-                        {produto.map((el: any, index: number) => (
+                        {produto.map((el: TProdutos, index: number) => (
                             <CardCarrinho key={`${el.name}-${index}`} {...el} />
                         ))}
                     </BoxItem>
