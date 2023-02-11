@@ -12,7 +12,7 @@ export const BoxSC = styled(Box)`
     width: 100%;
     height: 60px;
     padding: 0 60px;
-    background-color: var(--azul);
+    background-color: var(--primario);
 
     .img-container {
         display: flex;

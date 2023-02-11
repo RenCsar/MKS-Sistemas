@@ -41,12 +41,12 @@ export const DrawerAside = () => {
             role="presentation"
             onKeyDown={toggleDrawer(anchor, false)}
             sx={{
-                background: 'var(--azul)',
+                background: 'var(--primario)',
             }}
         >
             <Box
                 sx={{
-                    background: 'var(--azul)',
+                    background: 'var(--primario)',
                     minHeight: '100vh',
                     width: smDown? '100vw' : '450px',
                     display: 'flex',

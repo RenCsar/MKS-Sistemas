@@ -58,7 +58,7 @@ export const BoxSC = styled(Box)`
 
     .comprar-container {
         ${flexCenter};
-        background-color: var(--azul);
+        background-color: var(--primario);
         gap: 14px;
         border-bottom-right-radius: 8px;
         border-bottom-left-radius: 8px;
