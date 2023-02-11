@@ -12,7 +12,13 @@ export const BoxSC = styled(Box)`
     width: 100%;
     height: 60px;
     padding: 0 60px;
-    background-color: var(--primario);
+    /* background-color: var(--primario); */
+    background: rgb(117,65,229);
+    background: -moz-linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
+    background: linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7541e5",endColorstr="#a086db",GradientType=1);
+
 
     .img-container {
         display: flex;

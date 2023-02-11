@@ -64,9 +64,25 @@ export const BoxSC = styled(Box)`
         border-bottom-left-radius: 8px;
         cursor: pointer;
         user-select: none;
-
+        transition: 0.6s;
+        
         & h6 {
             color: var(--branco);
+        }
+        
+        &:hover{
+            background-color: var(--primario-hover);
+            transform: scaleY(1.01);
+        }
+        
+        & :active {
+            transform: scale(0.95);                
+        }
+        
+        & .btn-content {
+            ${flexCenter};
+            gap: 14px;
+            width: 100%;
         }
     }
 `

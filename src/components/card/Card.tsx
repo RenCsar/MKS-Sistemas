@@ -31,10 +31,12 @@ export const Card = (produto: TProdutos) => {
         className='comprar-container'
         onClick={() => { dispatch(addProduto(produto)) }}
       >
-        <img src={Compra} alt="icone-compras" />
-        <Typography variant='h6'>
-          COMPRAR
-        </Typography>
+        <Box className='btn-content'>
+          <img src={Compra} alt="icone-compras" />
+          <Typography variant='h6' className='compra-txt'>
+            COMPRAR
+          </Typography>
+        </Box>
       </Box>
     </BoxSC>
   )
