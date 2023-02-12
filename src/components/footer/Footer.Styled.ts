@@ -8,4 +8,10 @@ export const BoxSC = styled(Box)`
     width: 100%;
     height: 34px;
     background-color: #EEEEEE;
+
+    @media (max-width: 400px){
+       word-wrap: break-word;
+       padding: 15px;
+       text-align: center;
+    }
 `
