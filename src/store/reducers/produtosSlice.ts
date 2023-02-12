@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import axios from 'axios'
 import { TProdutos, TProdutosState, TStore } from '../../utils/types';
+import { API } from '../../utils/api'
 
 export const getProdutos = createAsyncThunk<TProdutos[], undefined>('Produtos/getData', async () => {
-    const response = await axios.get('https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC')
+    const response = await API.get('')
     return [...response.data.products]
 });
 
