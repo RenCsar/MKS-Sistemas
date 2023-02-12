@@ -12,22 +12,31 @@ export const BoxSC = styled(Box)`
     width: 100%;
     height: 60px;
     padding: 0 60px;
-    /* background-color: var(--primario); */
     background: rgb(117,65,229);
     background: -moz-linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
     background: linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7541e5",endColorstr="#a086db",GradientType=1);
 
-
     .img-container {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         font-size: 20px;
         font-weight: 300;
         color: var(--branco);
         gap: 10px;
         user-select: none;
+
+        & img {
+            height: 50px;
+            border-radius: 8px;
+        }
+
+        & .text-marca {
+            font-family: 'Dancing Script', cursive;
+            font-size: 32px;
+            font-weight: 600;
+        }
     }
 
     .btn-container {
