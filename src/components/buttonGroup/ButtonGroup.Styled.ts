@@ -8,6 +8,8 @@ const flexCenter = `
 `
 
 export const BoxSC = styled(Box)`
+    ${flexCenter}
+
     & .container{
         ${flexCenter}
         border: 1px solid #BFBFBF;
@@ -31,5 +33,15 @@ export const BoxSC = styled(Box)`
         padding: 0 5px;
         height: 15px;
         user-select: none;
+    }
+
+    @media (max-width: 350px){
+        
+        & .qtd-container{
+            small{
+                position: absolute;
+                bottom: 34px;
+            }
+        }
     }
 `

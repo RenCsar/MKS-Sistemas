@@ -37,11 +37,17 @@ export const BoxSC = styled(Box)`
         bottom: 60px
     };
 
-    & .price-container {
-        font-weight: 700;
-        user-select: none;
-        width: 100px;
+    & .quantidade-container {
+        ${flexCenter};
+        gap: 10px;
+
+        & .price-container {
+            font-weight: 700;
+            user-select: none;
+            width: 100px;
+        }
     }
+
 
     & .btn-close{
         ${flexCenter}
@@ -71,4 +77,26 @@ export const BoxSC = styled(Box)`
     @media (max-width: 449px){
         width: 95%;
     };
+
+    @media (max-width: 350px){
+        height: 160px;
+        flex-direction: column;
+
+        & .img-container {
+            width: 100%;
+            img {
+                width: 70px;
+            };
+        };
+
+        & .name-container{
+            width: 100%;
+            text-align: center;
+        };
+    
+        & .quantidade-container{
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
 `

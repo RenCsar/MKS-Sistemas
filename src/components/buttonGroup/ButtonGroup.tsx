@@ -10,7 +10,9 @@ const ButtonGroup = (produto: TProdutos) => {
 
     return (
         <BoxSC>
-            <small>Qtd:</small>
+            <Box className='qtd-container'>
+                <small>Qtd:</small>
+            </Box>
             <Box className='container'>
                 <Box
                     className='btn'
