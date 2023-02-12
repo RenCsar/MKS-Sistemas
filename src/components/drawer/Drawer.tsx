@@ -126,7 +126,8 @@ export const DrawerAside = () => {
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontSize: '20px',
-                            fontWeight: '700'
+                            fontWeight: '700',
+                            cursor: 'pointer'
                         }}
                     >
                         Finalizar Compra
