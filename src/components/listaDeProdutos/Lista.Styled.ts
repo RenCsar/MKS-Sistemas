@@ -11,5 +11,9 @@ export const BoxSK = styled(Box)`
 `
 
 export const BoxSC = styled(BoxSK)`
-    margin: 15px 100px;
+    margin: 75px 100px 15px 100px;
+    
+    @media (max-width: 400px) {        
+        margin: 140px 100px 15px 100px;
+    }
 `

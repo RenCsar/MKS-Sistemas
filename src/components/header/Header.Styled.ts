@@ -11,12 +11,15 @@ export const BoxSC = styled(Box)`
     align-items: center;
     width: 100%;
     height: 60px;
-    padding: 0 60px;
+    padding: 0 60px;    
+    position: fixed;
+    z-index: 9;
     background: rgb(117,65,229);
     background: -moz-linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
     background: linear-gradient(90deg, rgba(117,65,229,1) 35%, rgba(160,134,219,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7541e5",endColorstr="#a086db",GradientType=1);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,.5);
 
     .img-container {
         display: flex;
@@ -60,7 +63,7 @@ export const BoxSC = styled(Box)`
     @media (max-width: 400px) {
         flex-direction: column;
         justify-content: space-around;
-        height: 120px;
+        height: 125px;
     }
 
 `
