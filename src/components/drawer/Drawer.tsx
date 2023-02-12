@@ -61,6 +61,9 @@ export const DrawerAside = () => {
                     <Box
                         className="btn-close"
                         onClick={toggleDrawer(anchor, false)}
+                        sx={{
+                            userSelect: 'none'
+                        }}
                     >
                         X
                     </Box>
@@ -90,7 +93,10 @@ export const DrawerAside = () => {
                     >
                         <Typography
                             variant='subtitle1'
-                            onClick={() => dispatch(limparCarrinho())}                           
+                            onClick={() => dispatch(limparCarrinho())} 
+                            sx={{
+                                userSelect: 'none'
+                            }}                          
                         >
                             {`Limpar carrinho (${produto.length})`}
                         </Typography>
@@ -104,7 +110,9 @@ export const DrawerAside = () => {
                             color: 'var(--branco)',
                             fontSize: '28px',
                             fontWeight: '700',
-                            height: '50px',
+                            height: '50px',  
+                            userSelect: 'none'
+
                         }}
                     >
                         <Box>
@@ -127,7 +135,8 @@ export const DrawerAside = () => {
                             alignItems: 'center',
                             fontSize: '20px',
                             fontWeight: '700',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            userSelect: 'none'
                         }}
                     >
                         Finalizar Compra
