@@ -29,9 +29,7 @@
 <a id="Descrição"></a>
 ### Descrição
 
-Esse projeto faz parte do [bootcamp Web Developer](https://www.dio.me/certificate/E98EA5EB) realizado pela parceria entre [Take Blip](https://www.take.net/), [Órbi Conecta](https://orbi.co/) e [DIO](https://www.dio.me/). Através dele, e com a orientação do professor [Felipe Silva Aguiar](https://www.linkedin.com/in/felipe-aguiar-047/), pude recriar a interface de uma plataforma de streaming de vídeos. <b font-weigth="700">O objetivo do projeto é educacional</b>. Sua finalidade é demonstrar o quê podemos fazer utilizando tecnologias simples como HTML5, CSS3 e JavaScript.
-
-Nesse projeto pude estruturar layout e posicionar elementos utilizando conceitos como: `box model`, `containers` e `Flexbox`. Para facilitar manutenção do CSS, utilizei variáveis para cores. Os efeitos na imagem e nos botões foi feito com a pseudo-classe `hover`. Também foi usado responsividade para quatro tamanhos de tela. O carousel de imagens foi feito com o plugins JQuery.
+Projeto full stack com Front feito com React JS e typescript e backend feito com NodeJS e Express.
 
 <a id="Tecnologias"></a>
 ### Tecnologias utilizadas
