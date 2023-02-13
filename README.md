@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+<h1 align="center">Tech Shopping</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">Todos os seus gadgets favoritos em um só lugar.</p>
 
-## Available Scripts
+<p align="center">
+ <a href="#Descrição">Descrição</a> •
+ <a href="#Tecnologias">Tecnologias utilizadas</a> •
+ <a href="#autor">Autor</a>
+</p>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h1 align="center">  
+  <p align="center">
+  <img width="800" height="400" src="img/Netflix-Cima.PNG"><br><br>
+  <img width="800" height="400" src="img/Netflix-baixo.PNG"><br><br>
+  <img width="800" height="400" src="img/Netflix.gif">
+</p>
 
-### `npm test`
+</h1>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a id="Descrição"></a>
+### Descrição
 
-### `npm run build`
+Esse projeto faz parte do [bootcamp Web Developer](https://www.dio.me/certificate/E98EA5EB) realizado pela parceria entre [Take Blip](https://www.take.net/), [Órbi Conecta](https://orbi.co/) e [DIO](https://www.dio.me/). Através dele, e com a orientação do professor [Felipe Silva Aguiar](https://www.linkedin.com/in/felipe-aguiar-047/), pude recriar a interface de uma plataforma de streaming de vídeos. <b font-weigth="700">O objetivo do projeto é educacional</b>. Sua finalidade é demonstrar o quê podemos fazer utilizando tecnologias simples como HTML5, CSS3 e JavaScript.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Nesse projeto pude estruturar layout e posicionar elementos utilizando conceitos como: `box model`, `containers` e `Flexbox`. Para facilitar manutenção do CSS, utilizei variáveis para cores. Os efeitos na imagem e nos botões foi feito com a pseudo-classe `hover`. Também foi usado responsividade para quatro tamanhos de tela. O carousel de imagens foi feito com o plugins JQuery.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a id="Tecnologias"></a>
+### Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-### `npm run eject`
+- [![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element)
+- [![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [![Jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)](https://api.jquery.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Autor
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Made with 💜 by Renan Cesar 👋
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![LinkedIn Badge](https://img.shields.io/badge/-Renan_Cesar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/renan-cesar/)](https://www.linkedin.com/in/renan-cesar/)
