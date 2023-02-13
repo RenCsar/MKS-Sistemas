@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <BoxSC>
             <Box className='img-container'>
-                <img src={Logo} />
+                <img src={Logo} alt="logo da empresa" />
                 <Typography data-testid="marca" className="text-marca">
                     Shopping
                 </Typography>

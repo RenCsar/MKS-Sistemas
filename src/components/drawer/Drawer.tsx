@@ -153,7 +153,7 @@ export const DrawerAside = () => {
                     <Button
                         onClick={toggleDrawer(anchor, true)}
                         className={'btn'}>
-                        <img src={Car} />
+                        <img src={Car} alt="carrinho de compras" />
                         <Typography component={'p'} sx={{ mt: '6px' }}>
                             {produto.length}
                         </Typography>
