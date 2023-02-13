@@ -1,6 +1,6 @@
 
 <h1 align="center">
- <img align="center" width="100" height="100" src="https://i.imgur.com/ngHfRyV.png"><br><br>
+ <img align="center" width="150" height="150" src="https://i.imgur.com/ngHfRyV.png"><br>
  Tech Shopping
 </h1>
 
@@ -39,11 +39,14 @@ Nesse projeto pude estruturar layout e posicionar elementos utilizando conceitos
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - React JS
-- Tpescript
+- Typescript
+- Redux toolkit
+- Redux Thunk
+- Axios
 - Styled Components
 - Material UI
 - Toastify
-- 
+- React Router Dom
 
 ---
 
