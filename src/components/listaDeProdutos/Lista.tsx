@@ -23,7 +23,7 @@ export const Lista = () => {
             { loading == 'loading' ?
                 <BoxSK className='skeleton-container'>
                     {skeletonOn.map((p: number, index: number) =>
-                        <CardSkeleton />
+                        <CardSkeleton key={`${p}-${index}`}/>
                     )}
                 </BoxSK>
                 : produtos.map((el: TProdutos, index: number) =>
