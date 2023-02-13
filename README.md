@@ -21,7 +21,7 @@
   <p align="center">
   <img width="800" height="400" src="img/Netflix-Cima.PNG"><br><br>
   <img width="800" height="400" src="img/Netflix-baixo.PNG"><br><br>
-  <img width="800" height="400" src="https://i.imgur.com/EiwDtBQ.gifv">
+  <img width="800" height="400" src="public/toast-erro.gif">
 </p>
 
 </h1>
