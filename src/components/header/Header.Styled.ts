@@ -33,6 +33,8 @@ export const BoxSC = styled(Box)`
         & img {
             height: 50px;
             border-radius: 8px;
+            width: 90px;
+            height: 50px;
         }
 
         & .text-marca {

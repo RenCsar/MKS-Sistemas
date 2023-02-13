@@ -20,10 +20,11 @@ export const BoxSC = styled(Box)`
     .img-container{
         ${flexCenter};
         width: 100%;
-        height: 138px;
+        height: 138px;        
         
-        .foto {
+        img {
             width: 110px;
+            height: 110px;
         }
     };
 
@@ -83,6 +84,11 @@ export const BoxSC = styled(Box)`
             ${flexCenter};
             gap: 14px;
             width: 100%;
+
+            & img {
+                width: 15px;
+                height: 16px;
+            }
         }
     }
 `

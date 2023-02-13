@@ -1,7 +1,7 @@
 import { Box, Typography, Drawer, Button, useTheme, useMediaQuery } from '@mui/material'
 import { useState } from 'react';
 import { Anchor, TProdutos, TStore } from '../../utils/types';
-import { BoxHA, BoxItem } from './Drawer.Styled';
+import { BoxHA, BoxI, BoxItem } from './Drawer.Styled';
 import Car from '../../assets/car.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { limparCarrinho } from '../../store/reducers/carrinhoSlice';
@@ -48,7 +48,7 @@ export const DrawerAside = () => {
                 sx={{
                     background: 'var(--primario)',
                     minHeight: '100vh',
-                    width: smDown? '100vw' : '450px',
+                    width: smDown ? '100vw' : '450px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between'
@@ -93,10 +93,10 @@ export const DrawerAside = () => {
                     >
                         <Typography
                             variant='subtitle1'
-                            onClick={() => dispatch(limparCarrinho())} 
+                            onClick={() => dispatch(limparCarrinho())}
                             sx={{
                                 userSelect: 'none'
-                            }}                          
+                            }}
                         >
                             {`Limpar carrinho (${produto.length})`}
                         </Typography>
@@ -110,7 +110,7 @@ export const DrawerAside = () => {
                             color: 'var(--branco)',
                             fontSize: '28px',
                             fontWeight: '700',
-                            height: '50px',  
+                            height: '50px',
                             userSelect: 'none'
 
                         }}
@@ -149,7 +149,7 @@ export const DrawerAside = () => {
     return (
         <Box>
             {(['right'] as const).map((anchor) => (
-                <Box key={anchor}>
+                <BoxI key={anchor}>
                     <Button
                         onClick={toggleDrawer(anchor, true)}
                         className={'btn'}>
@@ -165,7 +165,7 @@ export const DrawerAside = () => {
                     >
                         {list(anchor)}
                     </Drawer>
-                </Box>
+                </BoxI>
             ))}
         </Box>
     )

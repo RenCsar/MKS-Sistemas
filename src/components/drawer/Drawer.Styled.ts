@@ -49,3 +49,12 @@ export const BoxItem = styled(Box)`
     overflow-y: auto;  
     padding: 20px;    
 `
+
+export const BoxI = styled(Box)`
+
+    & img {
+        width: 20px;
+        height: 18px;
+    }
+
+`
