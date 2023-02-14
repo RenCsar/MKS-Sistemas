@@ -29,7 +29,11 @@
 <a id="Descrição"></a>
 ### Descrição
 
-Projeto full stack com Front feito com React JS e typescript e backend feito com NodeJS e Express.
+O projeto consiste em um e-commerce responsivo focando na acessibilidade e SEO. Nele é possível adicionar itens ao carrinho, escolher a quantidade de cada item e ao final simular uma compra com a emissão de um recibo.
+
+O projeto foi desenvolvido com as tecnologias **React Js** e **Typescript** no frontend e **Node JS** e **Express** no backend (veja a API clicando aqui). 
+
+Sobre as tecnologias utilizadas: as rotas da aplicação foram feitas com o **React Router Dom**, a estilização feita com **Styled Components** e **Material UI**, o gerenciamento de estado foi feito com **Redux** (Toolkit), as requisições de API foram feitas com **Redux Thunk** e **Axios** e para sinalizar possíveis erros da aplicação ao usuário foi utilizado o **toastify**.
 
 <a id="Tecnologias"></a>
 ### Tecnologias utilizadas
