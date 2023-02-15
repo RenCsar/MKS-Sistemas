@@ -29,7 +29,7 @@
 <a id="Descrição"></a>
 ### Descrição
 
-O projeto consiste em um e-commerce responsivo focando na acessibilidade e SEO. Nele é possível adicionar itens ao carrinho, escolher a quantidade de cada item e ao final simular uma compra com a emissão de um recibo.
+O projeto consiste em um e-commerce responsivo focando na acessibilidade e SEO. Nele é possível adicionar itens ao carrinho, escolher a quantidade de cada item, retirar itens e limpar o carrinho.
 
 O projeto foi desenvolvido com as tecnologias **React Js** e **Typescript** no frontend e **Node JS** e **Express** no backend (veja a API clicando aqui). 
 
