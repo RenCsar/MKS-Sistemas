@@ -33,7 +33,7 @@ O projeto consiste em um e-commerce responsivo focando na acessibilidade e SEO. 
 
 O projeto foi desenvolvido com as tecnologias **React Js** e **Typescript** no frontend e **Node JS** e **Express** no backend (<a href="https://github.com/RenCsar/TECH-shopping-api" target="_blank">veja o repositório da API clicando aqui</a>). 
 
-Sobre as tecnologias utilizadas: as rotas da aplicação foram feitas com o **React Router Dom**, a estilização feita com **Styled Components** e **Material UI**, o gerenciamento de estado foi feito com **Redux** (Toolkit), as requisições de API foram feitas com **Redux Thunk** e **Axios** e para sinalizar possíveis erros da aplicação ao usuário foi utilizado o **toastify**.
+Sobre as tecnologias utilizadas: as rotas da aplicação foram feitas com o **React Router Dom**, a estilização feita com **Styled Components** e **Material UI**, o gerenciamento de estado foi feito com **Redux** (Toolkit), as requisições de API foram feitas com **Redux Thunk** e **Axios** e para sinalizar ao usuário possíveis erros da aplicação foi utilizado o **toastify**.
 
 <a id="Tecnologias"></a>
 ### Tecnologias utilizadas
