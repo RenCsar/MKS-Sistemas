@@ -1,10 +1,11 @@
 
 <h1 align="center">
  <img align="center" width="150" height="150" src="https://i.imgur.com/ngHfRyV.png"><br>
- <a href="https://tech-shopping.vercel.app/">Tech Shopping</a>
+ Tech Shopping</a>
 </h1>
 
 <p align="center">Todos os seus gadgets favoritos em um só lugar.</p>
+<p align="center">Acesse o site da <a href="https://tech-shopping.vercel.app/">Tech Shopping</a>.</p>
 
 <p align="center">
  <a href="#Descrição">Descrição</a> •
